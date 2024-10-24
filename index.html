@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&display=swap" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
@@ -18,6 +19,7 @@
       }
       body {
         overflow-x: hidden;
+        font-family: Roboto;
       }
       .header {
         width: 100%;
@@ -78,7 +80,7 @@
         position: absolute;
         z-index: 2;
         left: -12px;
-        top: 25px;
+        top: 23px;
         /* border: 1px solid rgb(115, 108, 108); */
         box-shadow: -1px 1px 10px 0px rgba(147, 136, 136, 0.75);
         -webkit-box-shadow: -1px 1px 10px 0px rgba(147, 136, 136, 0.75);
@@ -459,6 +461,41 @@
 .show{
   display: flex;
 }
+.burger{
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+.burger-line{
+  width: 35px;
+  height: 3px;
+  background-color: black;
+}
+.top-line{
+  width: 20px;
+}
+.burger{
+  display: none;
+}
+.mobile-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background:#365465;
+  padding: 20px 50px;
+
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+}
+.show-menu{
+  transform: translateX(0%);
+}
+
 @media(max-width:880px){
   .under-list-yellow-shadow{
     flex-direction: column;
@@ -536,6 +573,12 @@
    .footer-navigation{
     gap: 10px;
    }
+   .pap{
+  margin-bottom: 107px;
+}
+.ohoh{
+  margin-bottom: 95px;
+}
   }
   @media(max-width:460px){
 .button-container{
@@ -552,13 +595,28 @@
     .footer-navigation{
       flex-wrap: wrap;
     }
+    .link-header{
+      display: none;
+    }
+    .burger{
+      display: flex;
+    }
   }
     </style>
     <div class="arrow-top">
 <img src="./images/icons8-стрелка-вверх-20.png" alt="" class="aroow-img">
     </div>
+    <div class="mobile-menu">
+      <a href="https://bajialeduchang.com/baccarat-calculator/" style="color: white; margin-top: 50px; font-size: 24px;">百家樂期望值</a>
+      <div style="color: white; font-size: 30px;" class="closest">X</div>
+    </div>
     <header class="header">
       <div class="header-container">
+        <div class="burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line top-line"></span>
+        </div>
         <span class="logo">
           <svg
             class=""
@@ -629,49 +687,49 @@
           <div class="modal-lenguages">
             <ul>
               <li>
-                <a href=""> <img src="./images/usa.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-us/"> <img src="./images/usa.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/canada.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-ca/"> <img src="./images/canada.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/australia.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-au/"> <img src="./images/australia.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/germany.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-de/"> <img src="./images/germany.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/1.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-sg/"> <img src="./images/1.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/2.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-my/"> <img src="./images/2.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/3.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-ph/"> <img src="./images/3.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/4.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-br/"> <img src="./images/4.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/5.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-vn/"> <img src="./images/5.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/6.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-hk/"> <img src="./images/6.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/7.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-tw/"> <img src="./images/7.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/8.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-in/"> <img src="./images/8.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/9.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-jp/"> <img src="./images/9.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/10.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-es/"> <img src="./images/10.png" alt="" /></a>
               </li>
               <li>
-                <a href=""> <img src="./images/11.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-fr/"> <img src="./images/11.png" alt="" /></a>
               </li>
             </ul>
           </div>
@@ -2128,7 +2186,7 @@
             </ul>
           </div>
           <span class="black-span next" style="margin-left: 0;">Ezugi 埃祖吉</span>
-          <p class="line"></p>
+          <p class="line pap"></p>
           <div class="big-image">
             <img src="./images/Ezugi.png" alt="">
           </div>
@@ -2402,7 +2460,7 @@
 </ul>
 <p style="margin: 30px 0;">百家乐因其简单、优雅和刺激的玩法而深受世界各地赌徒的喜爱。以下是百家乐如此受欢迎的五个原因：</p>
 <span class="black-span" style="margin-left: 0;">带来好运的百家乐策略 </span>
-            <p class="line"></p>
+            <p class="line ohoh"></p>
             <div class="text-center">
               <h4 class="number-title">№1. 古老的起源</h4>
               <p class="number-paragraph">百家乐源于法国，起源于中世纪的意大利，其名称来自意大利语 “baccarat”，意为 “零”。</p>
@@ -2548,7 +2606,7 @@
         </div>
       </div>
       <div class="last-block">
-        <span style="color: #666; font-size: 14px;">百家乐赌场 (Bǎijiālè Dǔchǎng) - 版权所有 © 2024</span>
+        <span style="color: #666; font-size: 12px;">百家乐赌场 (Bǎijiālè Dǔchǎng) - 版权所有 © 2024</span>
         <a href="mailto:simon.marphinski@gmail.com" style="color: white;">simon.marphinski@gmail.com</a>
       </div>
        </footer>
@@ -2568,6 +2626,16 @@ arrow.addEventListener("click", function() {
     behavior: "smooth" 
   });
 });
+let menu = document.querySelector(".mobile-menu");
+let burger = document.querySelector(".burger")
+let closest = document.querySelector(".closest")
+burger.addEventListener("click",()=>{
+menu.classList.add("show-menu")
+})
+
+closest.addEventListener("click",()=>{
+  menu.classList.remove("show-menu")
+})
 
        </script>
   </body>
