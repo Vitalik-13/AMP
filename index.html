@@ -82,9 +82,9 @@
         left: -12px;
         top: 23px;
         /* border: 1px solid rgb(115, 108, 108); */
-        box-shadow: -1px 1px 10px 0px rgba(147, 136, 136, 0.75);
+        /* box-shadow: -1px 1px 10px 0px rgba(147, 136, 136, 0.75);
         -webkit-box-shadow: -1px 1px 10px 0px rgba(147, 136, 136, 0.75);
-        -moz-box-shadow: -1px 1px 10px 0px rgba(147, 136, 136, 0.75);
+        -moz-box-shadow: -1px 1px 10px 0px rgba(147, 136, 136, 0.75); */
         width: 120px;
         padding-left: 20px;
         padding-top: 20px;
@@ -125,10 +125,10 @@
       .yellow-shadow {
         margin-top: 35px;
         margin-bottom: 20px;
-        padding: 30px 50px;
+        /* padding: 30px 50px;
         box-shadow: 0px -1px 32px -1px rgba(243, 243, 156, 0.75);
         -webkit-box-shadow: 0px -1px 32px -1px rgba(243, 243, 156, 0.75);
-        -moz-box-shadow: 0px -1px 32px -1px rgba(243, 243, 156, 0.75);
+        -moz-box-shadow: 0px -1px 32px -1px rgba(243, 243, 156, 0.75); */
       }
       .under-list-yellow-shadow {
         display: flex;
@@ -344,10 +344,10 @@
 }
 .red{
   text-align: center;
-  box-shadow: 0px -1px 32px -1px rgba(229, 31, 13, 0.75);
+  /* box-shadow: 0px -1px 32px -1px rgba(229, 31, 13, 0.75);
         -webkit-box-shadow: 0px -1px 32px -1px rgba(229, 31, 13, 0.75);
         -moz-box-shadow: 0px -1px 32px -1px rgba(229, 31, 13, 0.75);
-        margin-bottom: 40px;
+        margin-bottom: 40px; */
 }
 .red-paragraph{
   max-width: 700px;
@@ -458,6 +458,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
+  z-index: 5;
   display: none;
 }
 .arrow-top::after{
@@ -530,6 +531,9 @@
   display: flex;
   gap: 0 15px;
 }
+li a amp-img {
+    display: block;
+  }
 
 @media(max-width:880px){
   .under-list-yellow-shadow{
@@ -547,6 +551,7 @@
   }
   .table-img-container{
     width: 100%;
+    text-align: center;
   }
   .foto-text-container {
     flex-direction: column;
@@ -614,10 +619,16 @@
 .ohoh{
   margin-bottom: 95px;
 }
+
   }
   @media(max-width:460px){
 .button-container{
   flex-direction: column;
+  
+}
+.big-img{
+  max-width: 356!important;
+  height: 148px !important;
 }
   }
   @media(max-width:560px){
@@ -658,7 +669,7 @@
         </div>
         <a href="">
         <span class="logo">
-          <svg
+          <!-- <svg
             class=""
             width="22"
             height="22"
@@ -714,22 +725,25 @@
               d="M34.3488 30.1532V26.6302L32.524 24.8054L34.3488 22.9806V19.4582C34.3488 18.7095 34.9912 18.0978 35.7392 18.0978L33.0327 15.3261C33.0327 16.0748 32.3864 16.7465 31.6383 16.7465H16.1975C15.4488 16.7465 14.837 16.0415 14.837 15.2935L12.1305 18.0652C12.8792 18.0652 13.4857 18.7095 13.4857 19.4576V30.1526C13.4857 30.9013 12.0959 31.5 11.3479 31.5C11.3479 31.5 11.8747 32.2174 12.9457 33.0326C13.9311 33.7826 14.8696 34.1739 14.8696 34.1739C14.8696 33.4252 15.4488 32.8637 16.1968 32.8637H31.6377C32.3864 32.8637 32.9675 33.4258 32.9675 34.1739C32.9675 34.1739 34.0442 33.6848 34.8262 33.0978C35.8044 32.3635 36.3914 31.5978 36.3914 31.5978C35.6433 31.5985 34.3488 30.9019 34.3488 30.1532ZM31.6377 21.8582L30.0457 23.4502H23.8566V26.1613H30.0457L31.6377 27.7532V30.1532H16.1975V26.1613H25.5653V23.4502H16.1975V19.4582H31.6377V21.8582Z"
               fill="#C9362A"
             ></path>
-          </svg>
+          </svg> -->
+          
           <span class="text-logo">百家乐赌场</span>
         </span>
       </a>
         <span class="link-header"> <a href="">百家樂期望值</a></span>
-        <div class="languages">
-          <a href="#">
-            <!-- <img src="./images/завантаження.png" alt="" /> -->
+        <!-- <div class="languages">
+          <a href="#" class="shadow-link">
+            
             <amp-img src="./images/завантаження.png" width="800" height="400" layout="responsive" alt="Sample Image"></amp-img>
-            <img src="./images/icons8-шеврон-вниз-12.png" alt=""
-          /></a>
+            <amp-img src="./images/icons8-шеврон-вниз-12.png" width="12" height="12" alt=""></amp-img>
+          
+          </a>
+          
 
           <div class="modal-lenguages">
             <ul>
               <li>
-                <a href="https://bajialeduchang.com/zh-us/"> <img src="./images/usa.png" alt="" /></a>
+                <a href="https://bajialeduchang.com/zh-us/">  <amp-img src="./images/usa.png" width="24" height="24" layout="fixed" alt="USA Flag"></amp-img></a>
               </li>
               <li>
                 <a href="https://bajialeduchang.com/zh-ca/"> <img src="./images/canada.png" alt="" /></a>
@@ -775,7 +789,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </header>
     <main>
@@ -825,7 +839,7 @@
             百家乐，每种游戏类型都有自己的特点。
           </p>
           <div class="img-container">
-            <img src="./images/baccarat_banner_1270x530.jpg.avif" alt="" />
+            <amp-img src="./images/baccarat_banner_1270x530.jpg.avif" width="1024" height="427" layout="fixed" alt="USA Flag" class="big-img"></amp-img>
           </div>
           <p style="color: #666; font-size: 14px; font-style: italic">
             百家乐赌场
@@ -1110,7 +1124,7 @@
             </tbody>
           </table>
           <div class="table-img-container">
-            <img src="./images/Live-Baccarat-696x392.png" alt="">
+            <amp-img src="./images/Live-Baccarat-696x392.png" width="321" height="180" layout="fixed" alt="USA Flag"></amp-img>
           </div>
         </div>
         <div class="paraph-container" style="max-width: 65%;">
@@ -1172,7 +1186,13 @@
             </tbody>
           </table>
           <div class="table-img-container">
-            <img src="./images/baccarat-squeez.png" alt="">
+            <amp-img 
+            src="./images/baccarat-squeez.png" 
+            width="324" 
+            height="175" 
+            layout="responsive" 
+            alt="Baccarat Squeeze">
+        </amp-img>
           </div>
         </div>
         <div class="paraph-container" style="max-width: 65%;">
@@ -1239,7 +1259,13 @@
             </tbody>
           </table>
           <div class="table-img-container">
-            <img src="./images/baccarat-controlled-squeeze-live-evolution-696x398.jpg" alt="">
+            <amp-img 
+            src="./images/baccarat-controlled-squeeze-live-evolution-696x398.jpg" 
+            width="324" 
+            height="175" 
+            layout="responsive" 
+            alt="Baccarat Squeeze">
+        </amp-img>
           </div>
         </div>
         <div class="paraph-container" style="max-width: 65%;">
@@ -1302,16 +1328,17 @@
                   </th>
                   <th style="border: 1px solid  #e9dddd; padding: 10px; font-weight: 200; font-size: 16px;">27 秒钟</th>
                 </tr>
-                <!-- <tr>
-                  <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
-                    游戏速度
-                  </th>
-                  <th style="border: 1px solid  #e9dddd; padding: 10px; font-weight: 200; font-size: 16px;">27 秒钟</th>
-                </tr> -->
+                
               </tbody>
             </table>
             <div class="table-img-container">
-              <img src="./images/speed-baccarat2.png" alt="">
+              <amp-img 
+              src="./images/speed-baccarat2.png" 
+              width="324" 
+              height="175" 
+              layout="responsive" 
+              alt="Baccarat Squeeze">
+          </amp-img>
             </div>
           </div>
           <div class="paraph-container" style="max-width: 65%;">
@@ -1369,7 +1396,13 @@
                 </tbody>
               </table>
               <div class="table-img-container">
-                <img src="./images/Lightning-Baccarat3.png" alt="">
+                <amp-img 
+                src="./images/Lightning-Baccarat3.png" 
+                width="324" 
+                height="175" 
+                layout="responsive" 
+                alt="Baccarat Squeeze">
+            </amp-img>
               </div>
             </div>
             <div class="paraph-container" style="max-width: 65%;">
@@ -1429,7 +1462,13 @@
             </tbody>
           </table>
           <div class="table-img-container">
-            <img src="./images/xxxtreme_lighting_baccarat.jpg" alt="">
+            <amp-img 
+            src="./images/xxxtreme_lighting_baccarat.jpg" 
+            width="324" 
+            height="175" 
+            layout="responsive" 
+            alt="Baccarat Squeeze">
+        </amp-img>
           </div>
         </div>
         <div class="paraph-container" style="max-width: 65%;">
@@ -1497,7 +1536,13 @@
       </tbody>
     </table>
     <div class="table-img-container">
-      <img src="./images/no-commission-baccarat-696x392.png" alt="">
+      <amp-img 
+      src="./images/no-commission-baccarat-696x392.png" 
+      width="324" 
+      height="175" 
+      layout="responsive" 
+      alt="Baccarat Squeeze">
+  </amp-img>
     </div>
   </div>
   <div class="paraph-container" style="max-width: 65%;">
@@ -1561,7 +1606,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/Dual-Play-Baccarat-696x392.png" alt="">
+  <amp-img 
+  src="./images/Dual-Play-Baccarat-696x392.png" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -1605,7 +1656,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/multiplay-baccara-696x305.jpg" alt="">
+  <amp-img 
+  src="./images/multiplay-baccara-696x305.jpg" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -1667,7 +1724,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/red-envelope-baccarat-live-evolution-gaming.gif" alt="">
+  <amp-img 
+  src="./images/red-envelope-baccarat-live-evolution-gaming.gif" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -1729,7 +1792,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/peek_baccarat3.jpg" alt="">
+  <amp-img 
+  src="./images/peek_baccarat3.jpg" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -1792,7 +1861,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/golden-wealth-baccarat-live-696x392.png" alt="">
+  <amp-img 
+  src="./images/golden-wealth-baccarat-live-696x392.png" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -1856,7 +1931,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/first_person_-prosperirty_tree_baccarat.png" alt="">
+  <amp-img 
+  src="./images/first_person_-prosperirty_tree_baccarat.png" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -1921,7 +2002,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/bac_bo-696x396.png" alt="">
+  <amp-img 
+  src="./images/bac_bo-696x396.png" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -1984,7 +2071,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/First-Person-Baccarat.png" alt="">
+  <amp-img 
+  src="./images/First-Person-Baccarat.png" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -2047,7 +2140,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/Emperor-Golden-Wealth-Baccarat-by-Evolution-696x300.png" alt="">
+  <amp-img 
+  src="./images/Emperor-Golden-Wealth-Baccarat-by-Evolution-696x300.png" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -2110,7 +2209,13 @@
 </tbody>
 </table>
 <div class="table-img-container">
-<img src="./images/golden-wealth-baccarat-tile-696x392.png" alt="">
+  <amp-img 
+  src="./images/golden-wealth-baccarat-tile-696x392.png" 
+  width="324" 
+  height="175" 
+  layout="responsive" 
+  alt="Baccarat Squeeze">
+</amp-img>
 </div>
 </div>
 <div class="paraph-container" style="max-width: 65%;">
@@ -2132,7 +2237,13 @@
     </p>
   </div>
   <div class="table-img-container">
-    <img src="./images/Default-Social-Share-Image.jpg" alt="">
+    <amp-img 
+    src="./images/Default-Social-Share-Image.jpg" 
+    width="324" 
+    height="175" 
+    layout="responsive" 
+    alt="Baccarat Squeeze">
+</amp-img>
     </div>
  </div>
  <span class="black-span next" style="margin-left: 0;">Evolution 演变 </span>
@@ -2202,7 +2313,14 @@
               </table>
             </div>
             <div class="foto-wrapper">
-              <img src="./images/evolution-gaming-logo.png" alt="">
+              <amp-img 
+              src="./images/evolution-gaming-logo.png" 
+              width="900" 
+              height="500" 
+              layout="responsive" 
+              alt="Baccarat Squeeze" class="big-img">
+              
+          </amp-img>
             </div>
             </div>
             <div style="max-width: 605px;">
@@ -2230,7 +2348,14 @@
           <span class="black-span next" style="margin-left: 0;">Ezugi 埃祖吉</span>
           <p class="line pap"></p>
           <div class="big-image">
-            <img src="./images/Ezugi.png" alt="">
+            <amp-img 
+              src="./images/Ezugi.png" 
+              width="1068" 
+              height="406" 
+              layout="responsive" 
+              alt="Baccarat Squeeze" class="big-img">
+              
+          </amp-img>
           </div>
 
           <table
@@ -2300,7 +2425,14 @@
             <span class="black-span next" style="margin-left: 0;">Evolution 演变 </span>
             <p class="line"></p>
             <div class="black-foto-container">
-              <img src="./images/pragmatic-play-logo-696x392.png" alt="">
+              <amp-img 
+              src="./images/pragmatic-play-logo-696x392.png" 
+              width="696" 
+              height="392" 
+              layout="responsive" 
+              alt="Baccarat Squeeze" class="big-img">
+              
+          </amp-img>
             </div>
             <table
             style="
@@ -2439,7 +2571,14 @@
             <p style="margin-bottom: 25px; margin-top:-100px ;" class="margin-hide">在本节中，我们将介绍最有效的策略，帮助您在百家乐赌桌上找到运气，享受游戏的乐趣。</p>
     
             <div class="card-container">
-             <img src="images/baccarat-strategies-696x464.webp" alt="">
+              <amp-img 
+              src="./images/baccarat-strategies-696x464.webp" 
+              width="696" 
+              height="464" 
+              layout="responsive" 
+              alt="Baccarat Squeeze" class="big-img">
+              
+          </amp-img>
             </div>
             <div class="flex-under-list-container">
              <div class="left-block">
@@ -2526,7 +2665,15 @@
               <p class="number-paragraph">百家乐有许多变体，如极速百家乐“Speed Baccarat”、闪电百家乐“Lightning Baccarat”和无佣金百家乐 “No Commission Baccarat”，为赌徒提供了多种选择。</p>
             </div>
             <div class="card-container small-margin">
-              <img src="images/baccarat-strategies-696x464.webp" alt="">
+              <div class="card-container">
+                <amp-img 
+                src="./images/baccarat-strategies-696x464.webp" 
+                width="696" 
+                height="392" 
+                layout="responsive" 
+                alt="Baccarat Squeeze" class="big-img">
+                
+            </amp-img>
              </div>
              <span class="black-span" style="margin-left: 0;">澳门的百家乐现象 </span>
             <p class="line"></p>
@@ -2564,7 +2711,15 @@
           <p style="margin-bottom: 30px;">阅读我们的在线百家乐赌场专业词汇表，助您在游戏中运气更佳</p>
 
           <div class="border-foto-container">
-            <img src="./images/foto46.png" alt="">
+            <div class="card-container">
+              <amp-img 
+              src="./images/foto46.png" 
+              width="196" 
+              height="196" 
+              layout="responsive" 
+              alt="Baccarat Squeeze">
+              
+          </amp-img>
             <p class="name">Simon Zhān</p>
           </div>
           <h2 class="blue-title">要想在百家乐中赢得更多，请谨慎投注平局。它的赔率是 8:1，因此 5000 美元的赌注可以为您赢得 4800 美元。但由于只有 9.5% 的胜率，请谨慎使用，以确保您的银行账户安全。</h2>
@@ -2573,7 +2728,7 @@
     <footer class="footer">
       <div class="footer-container">
         <span class="logo">
-          <svg
+          <!-- <svg
             class=""
             width="22"
             height="22"
@@ -2629,7 +2784,7 @@
               d="M34.3488 30.1532V26.6302L32.524 24.8054L34.3488 22.9806V19.4582C34.3488 18.7095 34.9912 18.0978 35.7392 18.0978L33.0327 15.3261C33.0327 16.0748 32.3864 16.7465 31.6383 16.7465H16.1975C15.4488 16.7465 14.837 16.0415 14.837 15.2935L12.1305 18.0652C12.8792 18.0652 13.4857 18.7095 13.4857 19.4576V30.1526C13.4857 30.9013 12.0959 31.5 11.3479 31.5C11.3479 31.5 11.8747 32.2174 12.9457 33.0326C13.9311 33.7826 14.8696 34.1739 14.8696 34.1739C14.8696 33.4252 15.4488 32.8637 16.1968 32.8637H31.6377C32.3864 32.8637 32.9675 33.4258 32.9675 34.1739C32.9675 34.1739 34.0442 33.6848 34.8262 33.0978C35.8044 32.3635 36.3914 31.5978 36.3914 31.5978C35.6433 31.5985 34.3488 30.9019 34.3488 30.1532ZM31.6377 21.8582L30.0457 23.4502H23.8566V26.1613H30.0457L31.6377 27.7532V30.1532H16.1975V26.1613H25.5653V23.4502H16.1975V19.4582H31.6377V21.8582Z"
               fill="#C9362A"
             ></path>
-          </svg>
+          </svg> -->
           <span class="text-logo">百家乐赌场</span>
         </span>
         <ul class="footer-navigation">
@@ -2641,10 +2796,10 @@
           <li><a href="">Responsible Gambling 赌博成瘾</a></li>
         </ul>
         <div class="social-networks-container">
-          <a href=""> <img src="./images/tiktok_3938074.png" alt="" class="networks-images"></a>
+          <!-- <a href=""> <img src="./images/tiktok_3938074.png" alt="" class="networks-images"></a>
           <a href=""><img src="./images/linkedin_4096153.png" alt="" class="networks-images"></a>
           <a href=""><img src="./images/instagram_1400829.png" alt="" class="networks-images"></a>
-          <a href=""><img src="./images/play_16550564.png" alt="" class="networks-images"></a>
+          <a href=""><img src="./images/play_16550564.png" alt="" class="networks-images"></a> -->
         </div>
       </div>
       <div class="last-block">
@@ -2653,7 +2808,7 @@
       </div>
        </footer>
        
-       <script>
+       <!-- <script>
        let arrow = document.querySelector(".arrow-top");
 
 window.addEventListener("scroll", function() {
@@ -2717,6 +2872,6 @@ window.addEventListener("scroll", function() {
 
 
 
-       </script>
+       </script> -->
   </body>
 </html>
