@@ -12,6 +12,9 @@
         margin: 0;
         box-sizing: border-box;
       }
+      html{
+        scroll-behavior: smooth;
+      }
       a {
         text-decoration: none;
         color: black;
@@ -454,14 +457,15 @@
   height: 40px;
   border-radius: 50%;
   border: 2px solid #c3c0c0;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
   z-index: 5;
-  display: none;
+  
 }
-.arrow-top::after{
+/* .arrow-top::after{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -492,7 +496,7 @@
 
 .show{
   display: flex;
-}
+} */
 .burger{
   display: flex;
   flex-direction: column;
@@ -516,13 +520,16 @@
   z-index: 3;
   background:#365465;
   padding: 20px 50px;
-
   width: 100%;
   height: 100%;
   transform: translateX(-100%);
   transition: all 0.5s ease;
   display: flex;
   justify-content: space-between;
+  z-index: 6;
+}
+.mobile-menu:target{
+  transform: translateX(0%);
 }
 .show-menu{
   transform: translateX(0%);
@@ -531,11 +538,21 @@
   display: flex;
   gap: 0 15px;
 }
-li a amp-img {
-    display: block;
-  }
+.size-table{
+  width: 65%;
+}
+.paraph-container{
+  max-width: 65%;
+}
 
 @media(max-width:880px){
+  .size-table{
+    width: 100%;
+  }
+  
+  .paraph-container{
+    width: 100%;
+  }
   .under-list-yellow-shadow{
     flex-direction: column;
   }
@@ -619,6 +636,9 @@ li a amp-img {
 .ohoh{
   margin-bottom: 95px;
 }
+.very-margin{
+    margin-bottom: 100px;
+  }
 
   }
   @media(max-width:460px){
@@ -657,20 +677,20 @@ li a amp-img {
   </head>
   <body>
 
-    <div class="arrow-top" style="border-radius: 50%;">
+    <a href="#top-header"  class="arrow-top" style="border-radius: 50%;">
 <img src="./images/icons8-стрелка-вверх-20.png" alt=""  class="aroow-img">
-    </div>
-    <div class="mobile-menu">
+    </a>
+    <div class="mobile-menu" id="mobile-menu">
       <a href="https://bajialeduchang.com/baccarat-calculator/" style="color: white; margin-top: 50px; font-size: 24px;">百家樂期望值</a>
-      <div style="color: white; font-size: 30px;" class="closest">X</div>
+      <a href="#top-header" style="color: white; font-size: 30px;" class="closest">X</a>
     </div>
-    <header class="header">
+    <header class="header" id="top-header">
       <div class="header-container">
-        <div class="burger">
+        <a href="#mobile-menu" class="burger">
           <span class="burger-line"></span>
           <span class="burger-line"></span>
           <span class="burger-line top-line"></span>
-        </div>
+        </a>
         <a href="">
         <span class="logo">
           <svg
@@ -1082,7 +1102,7 @@ li a amp-img {
         </div>
         <span class="black-span">Live Baccarat</span>
         <div class="table-foto-container">
-          <table style="border-collapse: collapse; width: 65%; text-align: left;">
+          <table style="border-collapse: collapse; text-align: left;" class="size-table">
             <tbody>
               <tr>
                 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1138,13 +1158,13 @@ li a amp-img {
             <img src="./images/Live-Baccarat-696x392.png" alt=""></img>
           </div>
         </div>
-        <div class="paraph-container" style="max-width: 65%;">
+        <div class="paraph-container" >
         <p>现场百家乐Live Baccarat 是 Evolution Gaming 开发的最受欢迎的在线百家乐游戏之一。 这款游戏通过来自美国、欧洲和拉丁美洲工作室的高质量转播，为赌徒提供逼真的游戏体验。 每一轮都由专业的庄家进行。</p>
           <p style="margin: 30px 0;">真人百家乐庄家投注的平均 RTP（赌徒回报率） 为 98.94%，是赌场中最赚钱的游戏之一。赌徒投注的 RTP 为 98.76%，平局投注的 RTP 为 85.64%</p>
         </div>
         <span class="black-span" style="margin-left: 0;">Live Baccarat Squeeze</span>
                 <div class="table-foto-container">
-          <table style="border-collapse: collapse; width: 65%; text-align: left;">
+          <table style="border-collapse: collapse; text-align: left;" class="size-table">
             <tbody>
               <tr>
                 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1201,7 +1221,7 @@ li a amp-img {
           <img src="./images/baccarat-squeez.png" alt="">
           </div>
         </div>
-        <div class="paraph-container" style="max-width: 65%;">
+        <div class="paraph-container" >
           <p>现场百家乐Live Baccarat 是 Evolution Gaming 开发的最受欢迎的在线百家乐游戏之一。 这款游戏通过来自美国、欧洲和拉丁美洲工作室的高质量转播，为赌徒提供逼真的游戏体验。 每一轮都由专业的庄家进行。</p>
             <p style="margin: 30px 0;">真人百家乐庄家投注的平均 RTP（赌徒回报率） 为 98.94%，是赌场中最赚钱的游戏之一。赌徒投注的 RTP 为 98.76%，平局投注的 RTP 为 85.64%</p>
             <p style="margin: 30px 0;">Evolution Baccarat Squeeze 保持动态节奏，提供最大限度的刺激和真实感，提升了在线百家乐游戏的体验。 庄家会快速开牌以获得较低的赌注，同时娴熟地压牌以获得较高的总赌注。</p>
@@ -1212,7 +1232,7 @@ li a amp-img {
 
           <span class="black-span" style="margin-left: 0;">Live Baccarat Control Squeeze</span>
                 <div class="table-foto-container">
-          <table style="border-collapse: collapse; width: 65%; text-align: left;">
+          <table style="border-collapse: collapse; text-align: left;" class="size-table">
             <tbody>
               <tr>
                 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1268,13 +1288,13 @@ li a amp-img {
             <img src="./images/baccarat-controlled-squeeze-live-evolution-696x398.jpg" alt="">
           </div>
         </div>
-        <div class="paraph-container" style="max-width: 65%;">
+        <div class="paraph-container">
           <p>可从以下网站购买百家乐赌场 Live Baccarat Control Squeeze 是经典游戏的改进版，赌徒可以自己控制开牌过程。</p>
             <p style="margin: 30px 0;">这一功能增加了互动性，使游戏更加激烈。</p>
           </div>
           <span class="black-span" style="margin-left: 0;">Speed Baccarat</span>
           <div class="table-foto-container">
-            <table style="border-collapse: collapse; width: 65%; text-align: left;">
+            <table style="border-collapse: collapse; text-align: left;" class="size-table">
               <tbody>
                 <tr>
                   <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1335,14 +1355,14 @@ li a amp-img {
               <img src="./images/speed-baccarat2.png" alt="">
             </div>
           </div>
-          <div class="paraph-container" style="max-width: 65%;">
+          <div class="paraph-container">
             <p>SPEED BACCARAT (极速百家乐)的主要优点是游戏速度快。发牌和接受投注的时间被缩减到最短，这样您就可以在更短的时间内玩更多的回合</p>
               <p style="margin: 30px 0;">每轮游戏的总时间为 27 秒：接受投注的时间为 12 秒，投注结束后立即发牌。</p>
               
             </div>
             <span class="black-span" style="margin-left: 0;">Lightning Baccarat by Evolution</span>
             <div class="table-foto-container">
-              <table style="border-collapse: collapse; width: 65%; text-align: left;">
+              <table style="border-collapse: collapse;  text-align: left;" class="size-table">
                 <tbody>
                   <tr>
                     <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1393,7 +1413,7 @@ li a amp-img {
                <img  src="./images/Lightning-Baccarat3.png" alt="">
               </div>
             </div>
-            <div class="paraph-container" style="max-width: 65%;">
+            <div class="paraph-container" >
               <p>Lightning Baccarat (闪电百家乐) 对经典赌场游戏进行了全新演绎，每一轮都有基于随机数生成器(RNG) 的 Lightning Card “闪电卡 “倍增功能。</p>
                 <p style="margin: 30px 0;">这个令人兴奋的百家乐版本将现场百家乐的最佳体验与在获胜牌局中赚取多重赔率的机会结合在一起。</p>
                 <p style="margin: 30px 0;">在每轮游戏中，会从一副 52 张牌的虚拟牌组中随机抽取 1 到 5 张 “闪电牌”，每张 “闪电牌 ”都有 2 倍、3 倍、4 倍、5 倍或 8 倍的倍率。如果多张 “闪电卡 ”出现在同一投注点，它们的倍率将合并计算。</p>
@@ -1402,7 +1422,7 @@ li a amp-img {
               </div>
               <span class="black-span" style="margin-left: 0;">XXXtreme Lightning Baccarat Evolution</span>
                 <div class="table-foto-container">
-          <table style="border-collapse: collapse; width: 65%; text-align: left;">
+          <table style="border-collapse: collapse; text-align: left;" class="size-table">
             <tbody>
               <tr>
                 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1453,7 +1473,7 @@ li a amp-img {
             <img src="./images/xxxtreme_lighting_baccarat.jpg"  alt="">
           </div>
         </div>
-        <div class="paraph-container" style="max-width: 65%;">
+        <div class="paraph-container" >
           <p>在百家乐赌场 XXXtreme Lightning Baccarat（XXXtreme 闪电百家乐）是闪电百家乐的增强版，增加了更多潜在的乘数和更大的紧张感。顾名思义，这款游戏提供了极高的机会，让您可以通过倍数达到更高的数值来增加奖金。</p>
             <p style="margin: 30px 0;">与标准版闪电百家乐一样，游戏中使用的闪电卡的倍数从 2 倍到 8 倍不等。</p>
             <p style="margin: 30px 0;">XXXtreme 版本增加了 “Chain Lightning“ ”连锁闪电 ”和 “Double Strike Lightning” “双击闪电 ”的可能性，从而增加了 “闪电卡 ”的数量，或将乘数提高到令人难以置信的数值。</p>
@@ -1462,7 +1482,7 @@ li a amp-img {
           </div>
           <span class="black-span" style="margin-left: 0;">No Commission Baccarat</span>
           <div class="table-foto-container">
-    <table style="border-collapse: collapse; width: 65%; text-align: left;">
+    <table style="border-collapse: collapse; text-align: left;" class="size-table">
       <tbody>
         <tr>
           <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1521,14 +1541,14 @@ li a amp-img {
       <img src="./images/no-commission-baccarat-696x392.png" alt="">
     </div>
   </div>
-  <div class="paraph-container" style="max-width: 65%;">
+  <div class="paraph-container" >
     <p>No Commission Baccarat(无佣金百家乐)是经典百家乐的一种变体，对庄家的投注没有传统的 5%佣金。唯一的例外是当庄家得 6 分时，赌徒可获得初始投注额的一半，即 0.5:1。这就吸引了那些想在庄家赢钱时避免额外费用的赌徒。</p>
       <p style="margin: 30px 0;">超级 6 分保险投注增加了额外的刺激性。如果赌徒下注，而庄家拿到 6 点，则赔率为 15:1。</p>
     </div>
       
 <span class="black-span" style="margin-left: 0;">Dual Play Baccarat</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse; text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1585,14 +1605,14 @@ li a amp-img {
   <img src="./images/Dual-Play-Baccarat-696x392.png" alt="">
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>陆上赌场和网上赌场的融合，没有比这更令人兴奋的了。Dual Play Baccarat（双人百家乐）利用最先进的摄像头和音响装置，在您的陆上赌场的任何百家乐赌桌上进行双向游戏。</p>
 <p style="margin: 30px 0;">坐在赌桌上的赌徒和来自世界任何地方的几乎无限量的额外在线赌徒可以在同一张赌桌上玩同样的游戏。</p>
 <p style="margin: 30px 0;">在线赌徒可以直接进入世界上一些最著名赌场的游戏大厅，在那里与坐在现场的赌徒一起玩最快、最先进的双人篮球百家乐游戏。</p>
 </div>
 <span class="black-span" style="margin-left: 0;">Baccarat Multiplay by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse; text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1629,13 +1649,13 @@ li a amp-img {
   <img src="./images/multiplay-baccara-696x305.jpg" alt="">
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>博牌 (Bac Bo) 是另一种在全球华人赌徒中广受欢迎的百家乐赌场游戏类型。</p>
 <p style="margin: 30px 0;">另一个百家乐赌场游戏类型 Baccarat Multiplay 是 Evolution Gaming一款革命性工具，赌徒可以同时在多张百家乐赌桌上下注，倍率最高可达 88 倍。该功能专为那些希望通过在多个赌桌上实时投注来最大限度地提高获胜机会的赌徒而设计。</p>
 </div>
 <span class="black-span" style="margin-left: 0;">Red Envelope by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse;  text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1691,13 +1711,13 @@ li a amp-img {
   <img src="./images/red-envelope-baccarat-live-evolution-gaming.gif" alt=""> 
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 
 <p style="margin: 30px 0;">红包百家乐（Red Envelope Baccarat）是 Evolution Gaming 开发的标准百家乐游戏中的一个特殊功能，它通过红包奖金增加了获得大额奖金的可能性。该功能基于中国的传统，即以红包作为好运和财富的象征。</p>
 </div>
 <span class="black-span" style="margin-left: 0;">Peek Baccarat by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse; text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1753,14 +1773,14 @@ li a amp-img {
   <img src="./images/peek_baccarat3.jpg" alt="">
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>游戏的主要特点是赌徒可以在下注前 “偷看 ”一张或多张牌。</p>
 <p style="margin: 30px 0;">赌徒看到牌后，可以根据新信息决定增加或改变赌注。</p>
 <p style="margin: 30px 0;">赌徒有机会在看牌后增加赌注，最高可达 100%。</p>
 </div>
 <span class="black-span" style="margin-left: 0;">Golden Wealth Baccarat by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse; text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1816,7 +1836,7 @@ li a amp-img {
   <img src="./images/golden-wealth-baccarat-live-696x392.png" alt="">
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>Golden Wealth Baccarat （黄金财富百家乐）是 Evolution Gaming 开发的经典百家乐游戏的一个令人印象深刻的版本，于 2021 年发布。游戏设计美观大方，并通过特殊奖金提供额外的赢钱机会。</p>
 <p style="margin: 30px 0;">赌徒可以在三种主要变体上下注： 赌徒、庄家和和局。</p>
 <p style="margin: 30px 0;">游戏还引入了金卡功能，让您在某些情况下获得高达 8 倍的倍数，为游戏增添了额外的紧张感。</p>
@@ -1824,7 +1844,7 @@ li a amp-img {
 </div>
 <span class="black-span" style="margin-left: 0;">Prosperity Tree Baccarat by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse; text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1880,7 +1900,7 @@ li a amp-img {
   <img  src="./images/first_person_-prosperirty_tree_baccarat.png" alt="">
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>Prosperity Tree Baccarat （繁荣树百家乐) 是 Evolution Gaming 于 2022 年推出的另一款独特的百家乐游戏。这款游戏借鉴了中国文化的元素，注重运气和繁荣。
   与传统百家乐一样， 赌徒可以在赌徒、庄家和平局上下注。
   这款游戏还采用了 “发财树 ”机制，当游戏以特殊模式启动时，会激活赢钱的倍数</p>
@@ -1889,7 +1909,7 @@ li a amp-img {
 </div>
 <span class="black-span" style="margin-left: 0;">Bac Bo by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse; text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -1945,14 +1965,14 @@ li a amp-img {
   <img  src="./images/bac_bo-696x396.png" alt="">
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>赌徒赌谁会赢得这一局： 赌徒或庄家。</p>
 <p style="margin: 30px 0;">游戏使用六张牌，每位赌徒有一对牌。</p>
 <p style="margin: 30px 0;">Bac Bo是对传统纸牌游戏的一种全新尝试，它将百家乐元素与新的机制相结合，为赌徒带来独特的游戏体验。</p>
 </div>
 <span class="black-span" style="margin-left: 0;">First Person Baccarat by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse; text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -2008,14 +2028,14 @@ li a amp-img {
   <img  src="./images/First-Person-Baccarat.png" alt="">
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>First Person Baccarat（第一人称百家乐）是一款独特的百家乐游戏，让赌徒坐在屏幕后面也能感受到自己置身于游戏的中心。 这款游戏由 Evolution Gaming 于 2020 年推出。</p>
 <p style="margin: 30px 0;">游戏使用六张牌，每位赌徒有一对牌。</p>
 <p style="margin: 30px 0;">赌徒可以享受经典的百家乐规则，同时还能控制游戏的形式。</p>
 </div>
 <span class="black-span" style="margin-left: 0;">Emperor Golden Wealth Baccarat by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse;  text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -2071,14 +2091,14 @@ li a amp-img {
   <img  src="./images/Emperor-Golden-Wealth-Baccarat-by-Evolution-696x300.png" alt="">
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>Emperor Golden Wealth Baccarat 是 Evolution Gaming 制作的一款令人印象深刻的百家乐游戏。 该游戏于 2023 年发布，为经典游戏注入了新元素，使其更加刺激。</p>
 <p style="margin: 30px 0;">赌徒可以在三个主要选项上下注：赌徒、庄家和平局。</p>
 <p style="margin: 30px 0;">游戏中还包括特殊的 “Golden Cards“ “金卡”，赌徒有机会获得高额的倍数奖金，为游戏增添了更多活力。</p>
 </div>
 <span class="black-span" style="margin-left: 0;">First Person Golden Wealth Baccarat by Evolution</span>
 <div class="table-foto-container">
-<table style="border-collapse: collapse; width: 65%; text-align: left;">
+<table style="border-collapse: collapse;  text-align: left;" class="size-table">
 <tbody>
 <tr>
 <th style="border: 1px solid  #e9dddd; padding: 10px;font-weight: 600; width: 85px; ">
@@ -2134,7 +2154,7 @@ li a amp-img {
   <img  src="./images/golden-wealth-baccarat-tile-696x392.png" alt=""> 
 </div>
 </div>
-<div class="paraph-container" style="max-width: 65%;">
+<div class="paraph-container" >
 <p>First Person Golden Wealth Baccarat (第一人称黄金财富百家乐)— 是经典百家乐的独特版本，赌徒可以从第一人称体验游戏。该游戏由 Evolution Gaming 于 2021 年推出，增加了新的互动性</p>
 <p style="margin: 30px 0;">First Person Golden Wealth Baccarat(第一人称黄金财富百家乐)为经典游戏增添了新的维度，让赌徒以直观的互动形式享受百家乐的乐趣，是重视控制和易玩性的赌徒的最佳选择。</p>
 </div>
@@ -2396,7 +2416,7 @@ li a amp-img {
             </p>
             <p style="margin-bottom: 25px;">在线百家乐的基本规则</p>
             <span class="black-span" style="margin-left: 0;">如何玩百家乐？ - 规则概述 </span>
-            <p class="line"></p>
+            <p class="line very-margin"></p>
             <p style="margin-bottom: 25px; margin-top:-80px ;" class="none-margin">百家乐的目标是尽可能接近 9 点。赌徒下注赌闲家、庄家或平局获胜。游戏使用的牌中，2-9 的面值根据其数字而定，A 值 1 分，而 10、J、Q、K 不值分（0）。
             </p>
             <div class="button-container">
@@ -2405,7 +2425,7 @@ li a amp-img {
               <a class="link-block-shadow none-border">平局赌徒</a>
             </div>
             <span class="black-span" style="margin-left: 0;">在线百家乐的基本规则 </span>
-            <p class="line"></p>
+            <p class="line very-margin"></p>
             <p style="margin-bottom: 25px; margin-top:-80px ;" class="none-margin">赌徒可以下三种注：赌徒、庄家或平局。然后，每手牌（赌徒和庄家）发两张牌，点数由 10 的模数决定。例如，如果牌的总和是 17，那么这手牌的成本就是 7 点。
               <div class="button-container">
                 <a class="link-block-shadow none-border"> 
@@ -2414,7 +2434,7 @@ li a amp-img {
                 <a class="link-block-shadow none-border">平局赌徒</a>
               </div>
               <span class="black-span" style="margin-left: 0;">百家乐赔率 </span>
-            <p class="line"></p>
+            <p class="line very-margin"></p>
             <div style="margin-bottom: 25px; margin-top:-80px ;" class="none-margin-div">投注的彩金分配如下：赌徒投注的彩金为 1:1，庄家投注的彩金为 1:1（含 5%的佣金），平局投注的彩金通常为 8:1 或 9:1。
               <div class="button-container">
                 <a class="link-block-shadow none-border">百家乐赔率</a> 
@@ -2422,7 +2442,7 @@ li a amp-img {
                   游戏变体</a>
               </div>
               <span class="black-span" style="margin-left: 0;">游戏变体 </span>
-              <p class="line"></p>
+              <p class="line very-margin"></p>
               <p style="margin-bottom: 25px; margin-top:-80px ;"class="none-margin">百家乐游戏有多种变体，每种变体都有自己的特点和规则，以适应不同赌徒的风格。</p>
               <p style="margin-bottom: 25px; margin-top:20px ;">黄金财富百家乐” “Golden Wealth Baccarat“和 ”无佣金百家乐” “No Commission Baccarat”等变体提供了独特的机制，使游戏更加刺激。每种变体都提供了多样性，让赌徒找到最适合自己喜好的风格。</p>
               <div class="wrapper" style="display: flex; justify-content: space-between;">
@@ -2454,10 +2474,10 @@ li a amp-img {
   </div>
 </div>
 <span class="black-span" style="margin-left: 0;">带来好运的百家乐策略 </span>
-            <p class="line"></p>
-            <p style="margin-bottom: 25px; margin-top:-20px ;">能带来好运的百家乐策略是赌徒提高胜率的基本要素。</p>
-            <p style="margin-bottom: 25px; margin-top:-100px;" class="margin-hide">有各种各样的策略，比如押庄家、使用亏损加仓系统或分析过去的游戏，都可以帮助赌徒做出明智的决定。</p>
-            <p style="margin-bottom: 25px; margin-top:-100px ;" class="margin-hide">在本节中，我们将介绍最有效的策略，帮助您在百家乐赌桌上找到运气，享受游戏的乐趣。</p>
+            <p class="line very-margin"></p>
+            <p style="margin-bottom: 25px; ">能带来好运的百家乐策略是赌徒提高胜率的基本要素。</p>
+            <p style="margin-bottom: 25px; ;" class="margin-hide">有各种各样的策略，比如押庄家、使用亏损加仓系统或分析过去的游戏，都可以帮助赌徒做出明智的决定。</p>
+            <p style="margin-bottom: 25px; " class="margin-hide">在本节中，我们将介绍最有效的策略，帮助您在百家乐赌桌上找到运气，享受游戏的乐趣。</p>
     
             <div class="card-container">
               <img  src="./images/baccarat-strategies-696x464.webp" alt="">
@@ -2523,7 +2543,7 @@ li a amp-img {
 </ul>
 <p style="margin: 30px 0;">百家乐因其简单、优雅和刺激的玩法而深受世界各地赌徒的喜爱。以下是百家乐如此受欢迎的五个原因：</p>
 <span class="black-span" style="margin-left: 0;">带来好运的百家乐策略 </span>
-            <p class="line ohoh"></p>
+            <p class="line very-margin ohoh"></p>
             <div class="text-center">
               <h4 class="number-title">№1. 古老的起源</h4>
               <p class="number-paragraph">百家乐源于法国，起源于中世纪的意大利，其名称来自意大利语 “baccarat”，意为 “零”。</p>
@@ -2551,7 +2571,7 @@ li a amp-img {
                 <img  src="./images/baccarat-strategies-696x464.webp" alt="">
              </div>
              <span class="black-span" style="margin-left: 0;">澳门的百家乐现象 </span>
-            <p class="line"></p>
+            <p class="line very-margin"></p>
             <div style="margin-top: -80px; " class="none-margin">
             <p style="margin-bottom: 30px;">澳门被视为世界上最重要的赌城之一，百家乐已成为澳门成功和繁荣的象征。自 1962 年澳门第一家赌场开业以来，百家乐游戏迅速受到当地人和游客的欢迎，尤其是来自中国的游客。</p>
             <p style="margin-bottom: 30px;">如今，百家乐约占澳门赌场总投注额的 90%，可见其受欢迎程度之高。</p>
@@ -2676,7 +2696,7 @@ li a amp-img {
       </div>
        </footer>
        
-       <script>
+       <!-- <script>
        let arrow = document.querySelector(".arrow-top");
 
 window.addEventListener("scroll", function() {
@@ -2740,6 +2760,6 @@ window.addEventListener("scroll", function() {
 
 
 
-       </script>
+       </script> -->
   </body>
 </html>
