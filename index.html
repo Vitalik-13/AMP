@@ -2676,7 +2676,7 @@ li a amp-img {
       </div>
        </footer>
        
-       <!-- <script>
+       <script>
        let arrow = document.querySelector(".arrow-top");
 
 window.addEventListener("scroll", function() {
@@ -2702,44 +2702,44 @@ menu.classList.add("show-menu")
 closest.addEventListener("click",()=>{
   menu.classList.remove("show-menu")
 })
-// let arrow = document.querySelector(".arrow-top");
 
-// Функція для обчислення відсотка прокручування сторінки
+
+
 function getScrollPercentage() {
-  const scrollTop = window.scrollY; // Позиція прокрутки
-  const windowHeight = window.innerHeight; // Висота вікна
-  const docHeight = document.documentElement.scrollHeight; // Повна висота документа
+  const scrollTop = window.scrollY; 
+  const windowHeight = window.innerHeight; 
+  const docHeight = document.documentElement.scrollHeight; 
 
-  // Визначення відсотка прокрутки сторінки
+  
   return (scrollTop / (docHeight - windowHeight)) * 100;
 }
 
-// Функція для оновлення кольору бордера на основі відсотка скролу
+
 function updateArrowBorder() {
   const scrollPercent = getScrollPercentage();
   
-  // Обчислюємо кут, на який заповнюється чорний колір
-  const angle = scrollPercent * 3.6; // 3.6 градусів для кожного відсотка (360 градусів / 100%)
   
-  // Змінюємо градієнт фону бордера
+  const angle = scrollPercent * 3.6; 
+  
+ 
   arrow.style.background = `conic-gradient(#000 ${angle}deg, #c3c0c0 ${angle}deg)`;
 }
 
-// Слухач події на скрол
+
 window.addEventListener("scroll", function() {
-  // Показуємо або ховаємо стрілку залежно від прокрутки
+  
   if (window.scrollY > 50) {
     arrow.style.display = "flex";
   } else {
     arrow.style.display = "none";
   }
 
-  // Оновлюємо бордер по мірі скролу
+  
   updateArrowBorder();
 });
 
 
 
-       </script> -->
+       </script>
   </body>
 </html>
